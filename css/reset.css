@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+:root {
+  --primary: #557aff;
+  --black: #21273a;
+  --dark: #131724;
+  --white: #f4f6ff;
+  --green: #2df259;
+  --red: #ff3a3a;
+  --gray: #b9b9b9;
+}
+
+html {
+  color: var(--black);
+  background: var(--white);
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  background: var(--gray);
+}
+
+::-webkit-scrollbar-corner {
+  background: var(--gray);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+}
+
+html {
+  font-size: 100%;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 500;
+}
+
+pre {
+  padding: 0 !important;
+}
+
+code {
+  padding: 1rem !important;
+  border-radius: 10px;
+  max-width: 90%;
+  font-family: "Fira Code", monospace;
+  margin-top: 0.2rem;
+}

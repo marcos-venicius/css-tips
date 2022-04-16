@@ -19,6 +19,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/atom-one-dark.min.css"
     />
+    <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/index.css" />
     <link rel="stylesheet" href="./css/menu.css" />
   </head>
@@ -34,12 +35,8 @@
     </button>
 
     <div class="overlay" id="overlay">
-      <aside class="view">
+      <aside id="view" class="view">
         <span></span>
-        <p>
-          <a class="goto" href="#animated_background_hover">#</a> animated
-          background hover
-        </p>
       </aside>
     </div>
 
@@ -56,7 +53,7 @@
           <p>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. In eum
             soluta quos!
-            <a href="https://example.com" target="_blank" class="link"
+            <a href="#" class="link"
               >Doloremque sunt similique beatae qui aut corporis, reprehenderit
               sapiente, sit nam, in fugit
             </a>
@@ -132,6 +129,6 @@ a:hover {
       onload="highlightAll()"
       src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"
     ></script>
-    <script src="./js/menu.js"></script>
+    <script type="module" src="./js/main.mjs"></script>
   </body>
 </html>
