@@ -1,0 +1,251 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+html {
+  color: #21273a;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --primary: #557aff;
+}
+
+::selection {
+  background-color: var(--primary);
+  color: white;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  background: rgb(199, 199, 199);
+}
+
+::-webkit-scrollbar-corner {
+  background: rgb(199, 199, 199);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(133, 133, 133);
+}
+
+html {
+  font-size: 100%;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 500;
+}
+
+.title {
+  font-size: 3rem;
+  text-align: center;
+  margin-top: 1rem;
+  position: sticky;
+  top: 0;
+  background: white;
+  z-index: 100;
+  width: 100%;
+}
+
+@keyframes span1 {
+  0% {
+    color: rgb(199, 199, 199);
+  }
+  100% {
+    color: rgba(28, 22, 43, 0.5);
+  }
+}
+@keyframes span2 {
+  0% {
+    color: rgb(199, 199, 199);
+  }
+  100% {
+    color: rgba(69, 35, 156, 0.5);
+  }
+}
+@keyframes span3 {
+  0% {
+    color: rgb(199, 199, 199);
+  }
+  100% {
+    color: var(--primary);
+  }
+}
+
+.title > span {
+  font-weight: 900;
+  color: rgb(199, 199, 199);
+}
+
+.title > span:nth-of-type(1) {
+  animation: span1 1s linear 2s infinite alternate-reverse forwards;
+}
+.title > span:nth-of-type(2) {
+  animation: span2 1.5s linear 1.5s infinite alternate-reverse forwards;
+}
+.title > span:nth-of-type(3) {
+  animation: span3 2s linear 1s infinite alternate-reverse forwards;
+}
+
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 3rem;
+}
+
+.section {
+  width: min(90%, 1000px);
+  align-self: center;
+}
+
+.section > h2:first-child {
+  position: relative;
+  color: #444444;
+  font-size: 2rem;
+  padding-left: 1rem;
+  padding-block: 0.2rem;
+  vertical-align: middle;
+  transition: all 250ms linear;
+  position: sticky;
+  top: 3.5rem;
+  background-color: white;
+  z-index: 99;
+}
+
+.section > .content {
+  margin-top: 3rem;
+  width: 95%;
+  margin-inline: auto;
+  padding-bottom: 1rem;
+}
+
+.section > .content > p:not(:first-child) {
+  margin-top: 1rem;
+}
+
+.section > .content > h5.info {
+  font-weight: 600;
+  font-size: 1.2rem;
+  position: relative;
+  padding-block: 0.5rem;
+  padding-left: 1rem;
+}
+
+.section > .content > h5.info:not(:first-child) {
+  margin-top: 1rem;
+}
+
+.section > .content > h5.info::before {
+  content: "";
+  background-color: var(--primary);
+  opacity: 0.5;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 100%;
+}
+
+.link {
+  text-decoration: none;
+  color: var(--primary);
+  background-image: linear-gradient(45deg, var(--primary), 80%, transparent);
+  background-size: 0% 3px;
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  cursor: pointer;
+  transition: background-size 200ms ease;
+}
+
+.link:hover {
+  background-size: 100% 3px;
+}
+
+pre {
+  padding: 0 !important;
+}
+
+code {
+  padding: 1rem !important;
+  border-radius: 10px;
+  max-width: 90%;
+  font-family: "Fira Code", monospace;
+  margin-top: 0.2rem;
+}
+
+.code-title {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+
+.goto {
+  color: var(--primary);
+  padding-right: 1rem;
+  cursor: pointer;
+  background-image: linear-gradient(var(--primary), var(--primary));
+  background-repeat: no-repeat;
+  text-decoration: none;
+  background-size: 0% 3px;
+  background-position: bottom left;
+  transition: background-size 200ms linear;
+}
+
+.goto:hover {
+  background-size: 70% 3px;
+}
+
+.heart {
+  color: #ff3a3a;
+}
+
+footer {
+  width: 100%;
+  margin-top: 2rem;
+  padding: 1rem;
+  margin-inline: auto;
+  background-color: #131724;
+}
+
+footer > div {
+  width: min(90%, 1000px);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  place-items: center;
+  flex-wrap: wrap;
+  margin: auto;
+}
+
+@media screen and (max-width: 870px) {
+  footer > div {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+}
+
+footer img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+}
+
+footer p {
+  font-weight: 600;
+  color: #f4f6ff;
+}
+
+footer p:not(:first-child) {
+  margin-top: 0.5rem;
+}
+
+footer p > a {
+  color: var(--primary);
+}
